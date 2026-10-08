@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sahara 300</title>
+  <meta name="theme-color" content="#070605">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #070605;
+      --gold-light: #f5d98a;
+      --gold: #e3b341;
+      --gold-dark: #b97a1c;
+      --text: #f1ece0;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 16px;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(ellipse 70% 50% at 50% 45%, rgba(227, 179, 65, 0.10), transparent 70%),
+        var(--bg);
+      text-align: center;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 448px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 18px;
+      border: 1px solid rgba(227, 179, 65, 0.35);
+      border-radius: 999px;
+      background: rgba(227, 179, 65, 0.06);
+      color: var(--gold-light);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .badge svg { width: 15px; height: 15px; flex-shrink: 0; }
+
+    h1 {
+      margin-top: 28px;
+      font-size: clamp(36px, 12.5vw, 54px);
+      font-weight: 900;
+      line-height: 1.1;
+      white-space: nowrap;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      background: linear-gradient(180deg, var(--gold-light) 0%, var(--gold) 50%, var(--gold-dark) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: var(--gold);
+    }
+
+    .subtitle {
+      margin-top: 12px;
+      font-size: clamp(19px, 5.6vw, 23px);
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+    }
+
+    .photo {
+      width: 100%;
+      margin-top: 26px;
+      aspect-ratio: 1 / 1;
+      border-radius: 26px;
+      border: 1px solid rgba(227, 179, 65, 0.28);
+      background: #14110b;
+      overflow: hidden;
+      box-shadow: 0 0 60px rgba(227, 179, 65, 0.12), 0 20px 50px rgba(0, 0, 0, 0.6);
+    }
+
+    .photo { animation: float 5s ease-in-out infinite; }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+        box-shadow: 0 0 60px rgba(227, 179, 65, 0.12), 0 20px 50px rgba(0, 0, 0, 0.6);
+      }
+      50% {
+        transform: translateY(-8px);
+        box-shadow: 0 0 80px rgba(227, 179, 65, 0.24), 0 28px 60px rgba(0, 0, 0, 0.6);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .photo { animation: none; }
+    }
+
+    .photo img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 93%;
+      margin-top: 32px;
+      padding: 20px 24px;
+      border-radius: 999px;
+      background: linear-gradient(100deg, var(--gold-light) 0%, var(--gold) 50%, var(--gold-dark) 100%);
+      color: #120d03;
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      text-decoration: none;
+      box-shadow: 0 10px 40px rgba(227, 179, 65, 0.28);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .cta svg { width: 18px; height: 18px; flex-shrink: 0; }
+
+    .cta:hover,
+    .cta:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 48px rgba(227, 179, 65, 0.42);
+    }
+
+    .cta:active { transform: translateY(0); }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <span class="badge">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M10 2l1.9 5.6L17.5 9.5l-5.6 1.9L10 17l-1.9-5.6L2.5 9.5l5.6-1.9L10 2zm8.5 11l.9 2.6 2.6.9-2.6.9-.9 2.6-.9-2.6-2.6-.9 2.6-.9.9-2.6z"/>
+      </svg>
+      Edição especial limitada
+    </span>
+
+    <h1>Sahara 300</h1>
+
+    <p class="subtitle">🚀 Resultado breve 🍀</p>
+
+    <div class="photo">
+      <img src="https://i.imgur.com/HdooQ95.jpg" alt="Sahara 300">
+    </div>
+
+    <a class="cta" href="https://apprf.com/xre300-sahara?ref=3HEEwmQCQ9">
+      Quero ver os detalhes
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M5 12h14M13 6l6 6-6 6"/>
+      </svg>
+    </a>
+  </main>
+</body>
+</html>
