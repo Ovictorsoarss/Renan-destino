@@ -189,5 +189,20 @@
       </svg>
     </a>
   </main>
+
+  <script>
+    // Repassa fbclid, UTMs e demais parâmetros da URL para o link do botão
+    (function () {
+      var cta = document.querySelector('.cta');
+      if (!cta || !window.location.search) return;
+      try {
+        var url = new URL(cta.href);
+        new URLSearchParams(window.location.search).forEach(function (value, key) {
+          if (!url.searchParams.has(key)) url.searchParams.set(key, value);
+        });
+        cta.href = url.toString();
+      } catch (e) {}
+    })();
+  </script>
 </body>
 </html>
